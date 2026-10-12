@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>運行管理</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="header-title">
+        運行管理
+    </div>
+
+    <div
+        class="header-date"
+        id="todayDate"
+    >
+        ----/--/--
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <!-- 検索条件 -->
+    <section class="driver-info">
+
+        <div class="info-label">
+            車種
+        </div>
+
+        <select
+            id="vehicleSelect"
+            class="vehicle-select"
+        >
+            <option value="">
+                車種を選択してください
+            </option>
+        </select>
+
+
+        <div class="info-label date-label">
+            運送日
+        </div>
+
+        <input
+            type="date"
+            id="dateSelect"
+            class="date-select"
+        >
+
+    </section>
+
+
+    <!-- 運転手 -->
+    <section class="driver-info">
+
+        <div class="info-label">
+            運転手
+        </div>
+
+        <div
+            class="info-value"
+            id="driverName"
+        >
+            --
+        </div>
+
+    </section>
+
+
+    <!-- 本日の運行 -->
+    <section class="schedule-section">
+
+        <div class="section-header">
+
+            <h2>
+                運行予定
+            </h2>
+
+            <button
+                id="refreshButton"
+                class="refresh-button"
+            >
+                更新
+            </button>
+
+        </div>
+
+
+        <div
+            id="scheduleList"
+            class="schedule-list"
+        >
+            <div class="loading">
+                車種を選択してください
+            </div>
+        </div>
+
+    </section>
+
+
+    <div
+        id="statusMessage"
+        class="status-message"
+    ></div>
+
+</main>
+
+
+<footer class="footer">
+    運行実績を記録してください
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
